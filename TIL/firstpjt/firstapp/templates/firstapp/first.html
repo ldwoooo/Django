@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>해리해리해리해리해리해리해리해리</h1>
+    <p>이름 : {{ name }}</p>
+    <p>직업 : {{ job }}</p>
+    <p>메뉴리스트 : {{ menus }}</p>
+    {% for menu in menus %}
+        <p>상세 메뉴 : {{ menu }}</p>
+    {% endfor %}
+    <p>메뉴리스트의 길이 : {{ menus|length }}</p>
+    <p>타이틀 : {{ title }}</p>
+    <p>타이틀 with 필터 : {{ title|title }}</p>
+
+</body>
+</html>

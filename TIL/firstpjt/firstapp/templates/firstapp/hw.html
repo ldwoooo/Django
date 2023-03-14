@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>과제 A</h1>
+    {% for menu in menus %}
+        <p>{{ forloop.counter0 }}번째 메뉴 : {{ menu }}</p>
+    {% endfor %}
+
+    <h1>과제 B</h1>
+    {% for user in users %}
+        <p>{{ user }}</p>
+    {% empty %}
+        <p>현재 가입한 유저가 없습니다.</p>
+    {% endfor %}
+
+    <h1>과제 C</h1>
+    {% if forloop.first %}
+        <p>첫 번째 반복문입니다.</p>
+    {% else %}
+        <p>첫 번째 반복문이 아닙니다.</p>
+    {% endif %}
+
+    <h1>과제 D</h1>
+    <!-- 5 -->
+    <p>{{ 'hello'|length }}</p>
+    <!-- My Name Is Tom -->
+    <p>{{ 'my name is tom'|title}}</p>
+
+    <h1>과제 E</h1>
+    <!-- 2020년 02월 02일 (Sun) PM 02:02 -->
+    {{ today|date:"Y년 m월 d일 (D) A h:i" }}
+
+
+
+    
+</body>
+</html>
