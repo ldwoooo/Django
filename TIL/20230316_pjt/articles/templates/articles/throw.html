@@ -1,0 +1,11 @@
+{% extends './base.html' %}
+
+{% block content %}
+<form action="{% url 'myapps:catch' %}" method="POST">
+    {% comment %} 나는 위조가 안 된 정상 요청이야 {% endcomment %}
+    {% csrf_token %}
+    <input type="text" name='data'>
+    <input type="submit" value="던지기!">
+</form>
+
+{% endblock content %}

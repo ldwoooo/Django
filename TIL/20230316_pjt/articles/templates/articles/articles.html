@@ -1,0 +1,17 @@
+{% extends 'articles/base.html' %}
+
+{% block content %}
+<h1>전체 조회 페이지</h1>
+
+
+{% for article in articles %}
+
+<p>글번호: {{ article.id }}</p>
+<p>제목: {{ article.title }}</p>
+<p>내용: {{ article.content }}</p>
+
+<hr>
+
+{% endfor %}
+
+{% endblock content %}

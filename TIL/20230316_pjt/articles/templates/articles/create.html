@@ -1,0 +1,20 @@
+{% extends 'articles/base.html' %}
+
+{% block content %}
+<h1>생성 페이지</h1>
+
+<form action="{% url 'myapps:new' %}" method="POST">
+    {% csrf_token %}
+    <div>
+        <label for="title">제목: </label>
+        <input type="text" name='title'>
+    </div>
+    <div>
+        <label for="content">내용: </label>
+        <input type="text" name='content'>
+    </div>
+    <input type="submit" value='생성하기'>
+</form>
+
+
+{% endblock content %}
