@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Login</h1>
+  {% comment %} action이 비어있다 => 현재 URL 그대로 (자기자신에게) 요청을 보냄 {% endcomment %}
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="로그인">
+    {% comment %} <input type="text" name="next" value="{{ next }}"> {% endcomment %}
+  </form>
+{% endblock content %}
